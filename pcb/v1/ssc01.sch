@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CPU:Z80CPU U?
-U 1 1 5C2B6A7B
-P 3870 2410
-F 0 "U?" H 3870 2450 50  0000 C CNN
-F 1 "Z80CPU" H 3870 2340 50  0000 C CNN
-F 2 "" H 3870 2810 50  0001 C CNN
-F 3 "www.zilog.com/manage_directlink.php?filepath=docs/z80/um0080" H 3870 2810 50  0001 C CNN
-	1    3870 2410
-	1    0    0    -1  
-$EndComp
-$Comp
 L Memory_Flash:SST39SF040 U?
 U 1 1 5C2B6BB0
 P 7100 2470
@@ -61,8 +50,8 @@ $Comp
 L Interface_UART:MC68B50 U?
 U 1 1 5C2BBEE5
 P 2230 6150
-F 0 "U?" H 2180 7628 50  0000 C CNN
-F 1 "MC68B50" H 2180 7537 50  0000 C CNN
+F 0 "U?" H 2220 6150 50  0000 C CNN
+F 1 "MC68B50" H 1860 4970 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm" H 2280 5000 50  0001 L CNN
 F 3 "http://pdf.datasheetcatalog.com/datasheet/motorola/MC6850.pdf" H 2230 6150 50  0001 C CNN
 	1    2230 6150
@@ -266,16 +255,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5C2CB380
-P 6250 3070
-F 0 "#PWR?" H 6250 2820 50  0001 C CNN
-F 1 "GND" H 6255 2897 50  0000 C CNN
-F 2 "" H 6250 3070 50  0001 C CNN
-F 3 "" H 6250 3070 50  0001 C CNN
-	1    6250 3070
+P 6350 3070
+F 0 "#PWR?" H 6350 2820 50  0001 C CNN
+F 1 "GND" H 6470 2990 50  0000 C CNN
+F 2 "" H 6350 3070 50  0001 C CNN
+F 3 "" H 6350 3070 50  0001 C CNN
+	1    6350 3070
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6250 3070 6500 3070
 Text Label 6390 2570 0    50   ~ 0
 A13
 Text Label 6390 2670 0    50   ~ 0
@@ -315,10 +302,8 @@ Entry Wire Line
 	10130 1860 10230 1960
 Entry Wire Line
 	10130 1760 10230 1860
-Text Label 4630 2810 0    50   ~ 0
-MEM_SELECT
-Wire Wire Line
-	4630 2810 4570 2710
+Text Label 4740 2830 0    50   ~ 0
+MEM_SEL
 Wire Wire Line
 	10020 1760 10130 1760
 Wire Wire Line
@@ -377,8 +362,6 @@ Text Label 10020 3060 0    50   ~ 0
 A13
 Text Label 10020 3160 0    50   ~ 0
 A14
-Wire Bus Line
-	4750 4060 7950 4060
 Entry Wire Line
 	4650 2910 4750 3010
 Wire Wire Line
@@ -477,18 +460,6 @@ Wire Wire Line
 	8990 2310 9120 2310
 Wire Wire Line
 	9120 2410 8990 2410
-Wire Bus Line
-	7950 1140 7950 4060
-Wire Bus Line
-	4750 3000 4750 4060
-Wire Bus Line
-	6290 820  6290 2570
-Wire Bus Line
-	10230 820  10230 3260
-Wire Bus Line
-	8890 1140 8890 2430
-Wire Bus Line
-	4750 820  4750 2720
 $Comp
 L power:VCC #PWR?
 U 1 1 5C318364
@@ -511,8 +482,462 @@ F 3 "" H 9570 3460 50  0001 C CNN
 	1    9570 3460
 	1    0    0    -1  
 $EndComp
-Text Notes 6230 4030 0    50   ~ 0
+Text Notes 4570 4520 0    50   ~ 0
 Data bus
 Text Notes 7140 790  0    50   ~ 0
 Address bus
+Text Label 4570 2910 0    50   ~ 0
+D0
+Text Label 4570 3010 0    50   ~ 0
+D1
+Text Label 4570 3110 0    50   ~ 0
+D2
+Text Label 4570 3210 0    50   ~ 0
+D3
+Text Label 4570 3310 0    50   ~ 0
+D4
+Text Label 4570 3410 0    50   ~ 0
+D5
+Text Label 4570 3510 0    50   ~ 0
+D6
+Text Label 4570 3610 0    50   ~ 0
+D7
+$Comp
+L CPU:Z80CPU U?
+U 1 1 5C2B6A7B
+P 3870 2410
+F 0 "U?" H 3870 2450 50  0000 C CNN
+F 1 "Z80CPU" H 3870 2340 50  0000 C CNN
+F 2 "" H 3870 2810 50  0001 C CNN
+F 3 "www.zilog.com/manage_directlink.php?filepath=docs/z80/um0080" H 3870 2810 50  0001 C CNN
+	1    3870 2410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4570 2710 4740 2830
+Text Label 7720 1270 0    50   ~ 0
+D0
+Text Label 7720 1370 0    50   ~ 0
+D1
+Text Label 7720 1470 0    50   ~ 0
+D2
+Text Label 7720 1570 0    50   ~ 0
+D3
+Text Label 7720 1670 0    50   ~ 0
+D4
+Text Label 7720 1770 0    50   ~ 0
+D5
+Text Label 7720 1870 0    50   ~ 0
+D6
+Text Label 7720 1970 0    50   ~ 0
+D7
+Text Label 9010 1810 0    50   ~ 0
+D0
+Text Label 9010 1910 0    50   ~ 0
+D1
+Text Label 9010 2010 0    50   ~ 0
+D2
+Text Label 9010 2110 0    50   ~ 0
+D3
+Text Label 9010 2210 0    50   ~ 0
+D4
+Text Label 9010 2310 0    50   ~ 0
+D5
+Text Label 9010 2410 0    50   ~ 0
+D6
+Text Label 9010 2510 0    50   ~ 0
+D7
+$Comp
+L power:VCC #PWR?
+U 1 1 5C320A03
+P 6180 3270
+F 0 "#PWR?" H 6180 3120 50  0001 C CNN
+F 1 "VCC" H 6080 3380 50  0000 C CNN
+F 2 "" H 6180 3270 50  0001 C CNN
+F 3 "" H 6180 3270 50  0001 C CNN
+	1    6180 3270
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3070 6500 3070
+$Comp
+L 74xx:74HCT04 U?
+U 1 1 5C321454
+P 8820 3060
+F 0 "U?" H 8770 3050 50  0000 C CNN
+F 1 "74HCT04" H 8910 2910 50  0000 C CNN
+F 2 "" H 8820 3060 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf" H 8820 3060 50  0001 C CNN
+	1    8820 3060
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT04 U?
+U 2 1 5C3217BA
+P 1430 6450
+F 0 "U?" H 1430 6767 50  0000 C CNN
+F 1 "74HCT04" H 1430 6676 50  0000 C CNN
+F 2 "" H 1430 6450 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf" H 1430 6450 50  0001 C CNN
+	2    1430 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT04 U?
+U 3 1 5C321B1F
+P 5490 5990
+F 0 "U?" H 5490 6307 50  0000 C CNN
+F 1 "74HCT04" H 5490 6216 50  0000 C CNN
+F 2 "" H 5490 5990 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf" H 5490 5990 50  0001 C CNN
+	3    5490 5990
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT04 U?
+U 4 1 5C321BA6
+P 4890 5990
+F 0 "U?" H 4890 6307 50  0000 C CNN
+F 1 "74HCT04" H 4890 6216 50  0000 C CNN
+F 2 "" H 4890 5990 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT04.pdf" H 4890 5990 50  0001 C CNN
+	4    4890 5990
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C3220DC
+P 5190 6140
+F 0 "R?" H 5260 6186 50  0000 L CNN
+F 1 "1K" V 5190 6090 50  0000 L CNN
+F 2 "" V 5120 6140 50  0001 C CNN
+F 3 "~" H 5190 6140 50  0001 C CNN
+	1    5190 6140
+	1    0    0    -1  
+$EndComp
+Connection ~ 5190 5990
+$Comp
+L Device:R R?
+U 1 1 5C322804
+P 4900 5430
+F 0 "R?" V 4800 5430 50  0000 C CNN
+F 1 "1M" V 4890 5430 50  0000 C CNN
+F 2 "" V 4830 5430 50  0001 C CNN
+F 3 "~" H 4900 5430 50  0001 C CNN
+	1    4900 5430
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 5430 5190 5430
+Wire Wire Line
+	5190 5430 5190 5990
+$Comp
+L Device:Crystal Y?
+U 1 1 5C325F9C
+P 4910 6480
+F 0 "Y?" H 4910 6650 50  0000 C CNN
+F 1 "7.3728Hz" H 4910 6320 50  0000 C CNN
+F 2 "" H 4910 6480 50  0001 C CNN
+F 3 "~" H 4910 6480 50  0001 C CNN
+	1    4910 6480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5190 6290 5190 6480
+Wire Wire Line
+	5060 6480 5190 6480
+Wire Wire Line
+	4760 6480 4590 6480
+Wire Wire Line
+	4590 6480 4590 5990
+Wire Wire Line
+	4590 5990 4590 5430
+Wire Wire Line
+	4590 5430 4750 5430
+Connection ~ 4590 5990
+$Comp
+L Device:C C?
+U 1 1 5C33FF80
+P 4590 6630
+F 0 "C?" H 4440 6710 50  0000 L CNN
+F 1 "22pF" H 4400 6530 50  0000 L CNN
+F 2 "" H 4628 6480 50  0001 C CNN
+F 3 "~" H 4590 6630 50  0001 C CNN
+	1    4590 6630
+	1    0    0    -1  
+$EndComp
+Connection ~ 4590 6480
+$Comp
+L Device:C C?
+U 1 1 5C340793
+P 5190 6630
+F 0 "C?" H 5305 6676 50  0000 L CNN
+F 1 "22pF" H 5240 6520 50  0000 L CNN
+F 2 "" H 5228 6480 50  0001 C CNN
+F 3 "~" H 5190 6630 50  0001 C CNN
+	1    5190 6630
+	1    0    0    -1  
+$EndComp
+Connection ~ 5190 6480
+$Comp
+L power:GND #PWR?
+U 1 1 5C340CC3
+P 4880 6900
+F 0 "#PWR?" H 4880 6650 50  0001 C CNN
+F 1 "GND" H 4885 6727 50  0000 C CNN
+F 2 "" H 4880 6900 50  0001 C CNN
+F 3 "" H 4880 6900 50  0001 C CNN
+	1    4880 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4880 6900 4590 6900
+Wire Wire Line
+	4590 6900 4590 6780
+Wire Wire Line
+	5190 6780 5190 6900
+Wire Wire Line
+	5190 6900 4880 6900
+Connection ~ 4880 6900
+Text Label 5790 5990 0    50   ~ 0
+CLOCK
+Text Label 6500 3470 2    50   ~ 0
+MEM_SEL
+Text Label 8520 3060 2    50   ~ 0
+MEM_SEL
+Wire Wire Line
+	6180 3270 6500 3270
+$Comp
+L 74xx:74LS32 U?
+U 1 1 5C353506
+P 2410 3010
+F 0 "U?" H 2410 3010 50  0000 C CNN
+F 1 "74LS32" H 2660 3130 50  0000 C CNN
+F 2 "" H 2410 3010 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2410 3010 50  0001 C CNN
+	1    2410 3010
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3170 2910 2710 2910
+Text Label 2110 3010 2    50   ~ 0
+~MEM_RD
+$Comp
+L 74xx:74LS32 U?
+U 2 1 5C35C195
+P 2410 2650
+F 0 "U?" H 2420 2660 50  0000 C CNN
+F 1 "74LS32" H 2660 2770 50  0000 C CNN
+F 2 "" H 2410 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2410 2650 50  0001 C CNN
+	2    2410 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2710 3110 2820 3110
+Wire Wire Line
+	3170 3010 2990 3010
+Wire Wire Line
+	2990 3010 2990 2550
+Wire Wire Line
+	2990 2550 2710 2550
+Wire Wire Line
+	2710 2750 2820 2750
+Wire Wire Line
+	2820 2750 2820 3110
+Connection ~ 2820 3110
+Wire Wire Line
+	2820 3110 3170 3110
+NoConn ~ 3170 2510
+NoConn ~ 3170 2310
+$Comp
+L power:VCC #PWR?
+U 1 1 5C379414
+P 3060 2410
+F 0 "#PWR?" H 3060 2260 50  0001 C CNN
+F 1 "VCC" H 2950 2490 50  0000 C CNN
+F 2 "" H 3060 2410 50  0001 C CNN
+F 3 "" H 3060 2410 50  0001 C CNN
+	1    3060 2410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3170 2410 3060 2410
+Text Label 2110 2650 2    50   ~ 0
+~MEM_WR
+$Comp
+L Device:R R?
+U 1 1 5C37F777
+P 3000 1060
+F 0 "R?" H 3060 1060 50  0000 L CNN
+F 1 "2K2" V 3000 990 50  0000 L CNN
+F 2 "" V 2930 1060 50  0001 C CNN
+F 3 "~" H 3000 1060 50  0001 C CNN
+	1    3000 1060
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3170 1210 3000 1210
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5C384B47
+P 2680 1210
+F 0 "SW?" H 2680 1400 50  0000 C CNN
+F 1 "Reset" H 2680 1150 50  0000 C CNN
+F 2 "" H 2680 1410 50  0001 C CNN
+F 3 "" H 2680 1410 50  0001 C CNN
+	1    2680 1210
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1210 2880 1210
+Connection ~ 3000 1210
+$Comp
+L power:GND #PWR?
+U 1 1 5C38A3A1
+P 2400 1210
+F 0 "#PWR?" H 2400 960 50  0001 C CNN
+F 1 "GND" H 2290 1090 50  0000 C CNN
+F 2 "" H 2400 1210 50  0001 C CNN
+F 3 "" H 2400 1210 50  0001 C CNN
+	1    2400 1210
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1210 2480 1210
+$Comp
+L power:VCC #PWR?
+U 1 1 5C38F6F6
+P 3000 910
+F 0 "#PWR?" H 3000 760 50  0001 C CNN
+F 1 "VCC" H 3017 1083 50  0000 C CNN
+F 2 "" H 3000 910 50  0001 C CNN
+F 3 "" H 3000 910 50  0001 C CNN
+	1    3000 910 
+	1    0    0    -1  
+$EndComp
+Text Label 3170 1510 2    50   ~ 0
+CLOCK
+$Comp
+L power:VCC #PWR?
+U 1 1 5C39097F
+P 3080 1810
+F 0 "#PWR?" H 3080 1660 50  0001 C CNN
+F 1 "VCC" H 2960 1930 50  0000 C CNN
+F 2 "" H 3080 1810 50  0001 C CNN
+F 3 "" H 3080 1810 50  0001 C CNN
+	1    3080 1810
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3080 1810 3170 1810
+NoConn ~ 3170 3610
+$Comp
+L power:VCC #PWR?
+U 1 1 5C39B193
+P 3100 3510
+F 0 "#PWR?" H 3100 3360 50  0001 C CNN
+F 1 "VCC" H 2980 3600 50  0000 C CNN
+F 2 "" H 3100 3510 50  0001 C CNN
+F 3 "" H 3100 3510 50  0001 C CNN
+	1    3100 3510
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3170 3510 3100 3510
+Text Label 6500 3570 2    50   ~ 0
+~MEM_RD
+Text Label 9120 2910 2    50   ~ 0
+~MEM_RD
+Text Label 9120 2760 2    50   ~ 0
+~MEM_WR
+Wire Bus Line
+	4750 4360 1450 4360
+Entry Wire Line
+	1450 4950 1550 5050
+Entry Wire Line
+	1450 5050 1550 5150
+Entry Wire Line
+	1450 5150 1550 5250
+Entry Wire Line
+	1450 5250 1550 5350
+Entry Wire Line
+	1450 5350 1550 5450
+Entry Wire Line
+	1450 5450 1550 5550
+Wire Wire Line
+	1550 5550 1730 5550
+Entry Wire Line
+	1450 5550 1550 5650
+Entry Wire Line
+	1450 5650 1550 5750
+Wire Wire Line
+	1550 5750 1730 5750
+Wire Wire Line
+	1730 5650 1550 5650
+Wire Wire Line
+	1550 5450 1730 5450
+Wire Wire Line
+	1730 5350 1550 5350
+Wire Wire Line
+	1550 5250 1730 5250
+Wire Wire Line
+	1730 5150 1550 5150
+Wire Wire Line
+	1550 5050 1730 5050
+Text Label 1580 5050 0    50   ~ 0
+D0
+Text Label 1580 5150 0    50   ~ 0
+D1
+Text Label 1580 5250 0    50   ~ 0
+D2
+Text Label 1580 5350 0    50   ~ 0
+D3
+Text Label 1580 5450 0    50   ~ 0
+D4
+Text Label 1580 5550 0    50   ~ 0
+D5
+Text Label 1580 5650 0    50   ~ 0
+D6
+Text Label 1580 5750 0    50   ~ 0
+D7
+$Comp
+L power:VCC #PWR?
+U 1 1 5C3DCBC3
+P 2230 4850
+F 0 "#PWR?" H 2230 4700 50  0001 C CNN
+F 1 "VCC" H 2230 5020 50  0000 C CNN
+F 2 "" H 2230 4850 50  0001 C CNN
+F 3 "" H 2230 4850 50  0001 C CNN
+	1    2230 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C3DCFAB
+P 2230 7350
+F 0 "#PWR?" H 2230 7100 50  0001 C CNN
+F 1 "GND" H 2230 7180 50  0000 C CNN
+F 2 "" H 2230 7350 50  0001 C CNN
+F 3 "" H 2230 7350 50  0001 C CNN
+	1    2230 7350
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	4750 4360 7950 4360
+Connection ~ 4750 4360
+Wire Bus Line
+	1450 4360 1450 5690
+Wire Bus Line
+	4750 3000 4750 4360
+Wire Bus Line
+	7950 1140 7950 4360
+Wire Bus Line
+	6290 820  6290 2570
+Wire Bus Line
+	10230 820  10230 3260
+Wire Bus Line
+	8890 1140 8890 2430
+Wire Bus Line
+	4750 820  4750 2720
 $EndSCHEMATC
