@@ -53,7 +53,7 @@ U 1 1 5C2BBEE5
 P 5090 6170
 F 0 "U2" H 5080 6170 50  0000 C CNN
 F 1 "MC68B50" H 4720 4990 50  0000 C CNN
-F 2 "Package_DIP:DIP-40_W15.24mm" H 5140 5020 50  0001 L CNN
+F 2 "Package_DIP:DIP-24_W15.24mm_LongPads" H 5140 5020 50  0001 L CNN
 F 3 "http://pdf.datasheetcatalog.com/datasheet/motorola/MC6850.pdf" H 5090 6170 50  0001 C CNN
 	1    5090 6170
 	1    0    0    -1  
