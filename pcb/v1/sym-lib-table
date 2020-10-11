@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name ssc)(type Legacy)(uri /Users/iley/projects/ssc/pcb/ssc.lib)(options "")(descr ""))
+  (lib (name ssc)(type Legacy)(uri ${KIPRJMOD}/../ssc.lib)(options "")(descr ""))
+  (lib (name ssc01-rescue)(type Legacy)(uri ${KIPRJMOD}/ssc01-rescue.lib)(options "")(descr ""))
 )
